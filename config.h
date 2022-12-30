@@ -1,6 +1,14 @@
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
+
+// Colors
+static const char col_black[]	    = "#323437";
+static const char col_beige[] 	    = "#e3c78a";
+static const char col_green[] 	    = "#8cc85f";
+static const char col_blue[] 	    = "#80a0ff";
+static const char col_purple[] 	    = "#ae81ff";
+
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 static const unsigned int alpha = 0xf0;
 static int centered = 1;                    /* -c option; centers dmenu on screen */
@@ -12,12 +20,14 @@ static const char *fonts[]          = { "FiraCode Nerd Font:size=18:antialias=tr
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
-	[SchemeSelHighlight] = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
-	[SchemeOut] = { "#000000", "#00ffff" },
-	[SchemeOutHighlight] = { "#ffc978", "#00ffff" },
+	[SchemeNorm] = { col_beige, col_black},
+	[SchemeSel] = { col_black, col_green },
+	[SchemeNormHighlight] = { col_purple, col_black },
+	[SchemeSelHighlight] = { col_black, col_purple },
+
+    // TODO delete?
+	//[SchemeOut] = { "#000000", "#00ffff" },
+	//[SchemeOutHighlight] = { "#ffc978", "#00ffff" },
 };
 
 static const unsigned int alphas[SchemeLast][2] = {
@@ -27,7 +37,7 @@ static const unsigned int alphas[SchemeLast][2] = {
 };
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines      = 10;
 
 /*
  * Characters not considered part of a word while deleting words
