@@ -4,7 +4,7 @@
 
 // Colors
 static const char col_black[]	    = "#323437";
-static const char col_beige[] 	    = "#e3c78a";
+static const char col_yellow[] 	    = "#e3c78a";
 static const char col_green[] 	    = "#8cc85f";
 static const char col_blue[] 	    = "#80a0ff";
 static const char col_purple[] 	    = "#ae81ff";
@@ -20,7 +20,7 @@ static const char *fonts[]          = { "FiraCode Nerd Font:size=18:antialias=tr
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { col_beige, col_black},
+	[SchemeNorm] = { col_yellow, col_black},
 	[SchemeSel] = { col_black, col_green },
 	[SchemeNormHighlight] = { col_purple, col_black },
 	[SchemeSelHighlight] = { col_black, col_purple },
