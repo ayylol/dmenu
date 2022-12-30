@@ -1,0 +1,5 @@
+#!/bin/sh
+
+PROGRAMSLIST=~/.local/share/programslist.txt
+
+cat $PROGRAMSLIST | dmenu "$@" | ${SHELL:-"/bin/sh"} &
