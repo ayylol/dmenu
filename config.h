@@ -3,10 +3,10 @@
 
 
 // Colors
-static const char col_black[]	    = "#323437";
+static const char col_black[]	      = "#323437";
 static const char col_yellow[] 	    = "#e3c78a";
 static const char col_green[] 	    = "#8cc85f";
-static const char col_blue[] 	    = "#80a0ff";
+static const char col_blue[] 	      = "#80a0ff";
 static const char col_purple[] 	    = "#ae81ff";
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
@@ -21,9 +21,9 @@ static const char *prompt      = NULL;      /* -p  option; prompt to the left of
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { col_yellow, col_black},
-	[SchemeSel] = { col_black, col_green },
-	[SchemeNormHighlight] = { col_purple, col_black },
-	[SchemeSelHighlight] = { col_black, col_purple },
+	[SchemeSel] = { col_black, col_yellow },
+	[SchemeNormHighlight] = { col_green, col_black },
+	[SchemeSelHighlight] = { col_black, col_green },
 
     // TODO delete?
 	//[SchemeOut] = { "#000000", "#00ffff" },
